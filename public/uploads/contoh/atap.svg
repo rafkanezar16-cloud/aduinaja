@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0e7490"/><stop offset="1" stop-color="#164e63"/></linearGradient></defs>
+<rect width="640" height="400" fill="url(#g)"/>
+<rect y="300" width="640" height="100" fill="#000" opacity=".12"/>
+<path d="M140 230 L320 100 L500 230 Z" fill="#e2e8f0"/><rect x="170" y="230" width="300" height="60" fill="#94a3b8"/><g fill="#7dd3fc"><path d="M300 240 q-8 18 0 26 q8-8 0-26z"/><path d="M340 250 q-8 18 0 26 q8-8 0-26z"/><path d="M270 262 q-8 16 0 24 q8-8 0-24z"/></g>
+<text x="320" y="372" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#fff">Atap bocor</text>
+<text x="620" y="24" text-anchor="end" font-family="Arial" font-size="12" fill="#fff" opacity=".7">Contoh foto bukti</text>
+</svg>

@@ -1,0 +1,32 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    public function up(): void
+    {
+        Schema::create('pengaduans', function (Blueprint $table) {
+            $table->id();
+            $table->string('kode')->unique();
+            $table->foreignId('user_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('kategori_kerusakan_id')->constrained('kategori_kerusakans');
+            $table->foreignId('lokasi_id')->constrained('lokasis');
+            $table->date('tanggal_kejadian');
+            $table->text('deskripsi');
+            $table->string('foto')->nullable();
+            $table->enum('status', ['diajukan', 'diproses', 'selesai', 'ditolak'])->default('diajukan');
+            $table->text('catatan_admin')->nullable();
+            $table->foreignId('ditangani_oleh')->nullable()->constrained('users')->nullOnDelete();
+            $table->timestamp('selesai_at')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    public function down(): void
+    {
+        Schema::dropIfExists('pengaduans');
+    }
+};
