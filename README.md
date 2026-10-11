@@ -1,6 +1,6 @@
 # AduinAja!! — Sistem Pengaduan Sarana Sekolah
 
-Project — SMK Negeri 5 Surakarta
+Project 
 Rafka Nezar Azriel Ghibran — XII RPL A / No. 27
 
 Aplikasi web Laravel + MySQL untuk pengaduan kerusakan sarana & prasarana sekolah,
@@ -8,20 +8,7 @@ dengan 2 role: **Siswa/Warga Sekolah** dan **Admin/Petugas Sarpras**.
 
 ---
 
-
----
-
-## Akun demo
-
-| Role  | Email                  | Password |
-|-------|------------------------|----------|
-| Admin | admin@aduinaja.sch.id  | password |
-| Siswa | andi@siswa.sch.id      | password |
-| Siswa | rafka@siswa.sch.id     | password |
-
----
-
-## 4. Fitur
+## Fitur
 
 **Siswa**
 - Login / logout, ubah profil & kata sandi
@@ -33,8 +20,22 @@ dengan 2 role: **Siswa/Warga Sekolah** dan **Admin/Petugas Sarpras**.
 - Verifikasi pengaduan: terima, tolak (dengan alasan), selesaikan, cari & filter status
 - Master Data: Kategori, Lokasi, Pengguna (CRUD)
 - Laporan: filter tanggal/status/kategori, export CSV (Excel), cetak/simpan PDF
+---
 
-## 5. Responsif
+
+## Akun demo
+
+| Role  | Email                  | Password |
+|-------|------------------------|----------|
+| Admin | admin@aduinaja.sch.id  | password |
+| Siswa | andi@siswa.sch.id      | password |
+| Siswa | rafka@siswa.sch.id     | password |
+
+---
+
+
+
+##  Responsif
 
 Tampilan menyesuaikan HP, tablet, dan desktop:
 - Sidebar menjadi **menu geser** (tombol ☰) di layar kecil
@@ -42,28 +43,18 @@ Tampilan menyesuaikan HP, tablet, dan desktop:
 - Form, grafik, dan kartu statistik menyesuaikan lebar layar
 - Sudah dicek di lebar 360 px, 390 px, 768 px, dan 1440 px tanpa scroll ke samping
 
-## 6. Unsur multimedia
+##  Unsur multimedia
 
 - **Gambar:** upload foto bukti dengan pratinjau langsung, drag & drop, dan validasi ukuran
 - **Video:** upload video bukti singkat (MP4/WebM/MOV, maks 10 MB) dengan pemutar bawaan dan pratinjau sebelum kirim
 - **Lightbox:** klik foto/ikon video di daftar untuk memperbesar / memutar tanpa pindah halaman (tutup dengan tombol X, klik area gelap, atau tombol Esc)
 - **Animasi ringan:** kartu muncul berurutan, angka statistik berhitung naik, grafik beranimasi, latar login bergerak (otomatis nonaktif jika perangkat memilih "kurangi animasi")
 
-Berkas upload disimpan di `public/uploads/bukti` (foto) dan `public/uploads/video` (video).
-Contoh foto/video untuk data seed ada di `public/uploads/contoh`. Tidak perlu `storage:link` maupun `npm install`.
 
-### Batas upload video di PHP
-Video maks 10 MB. Bawaan XAMPP/Laragon (`upload_max_filesize` dan `post_max_size` ±40 MB) sudah cukup.
-Jika video gagal diunggah, buka `php.ini` dan pastikan:
-```
-upload_max_filesize = 20M
-post_max_size = 25M
-```
-lalu restart Apache/`php artisan serve`.
 
 ---
 
-## 7. Struktur singkat
+##  Struktur singkat
 
 ```
 app/Http/Controllers/   Auth, Profile, Siswa/*, Admin/*
