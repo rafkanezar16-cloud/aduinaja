@@ -1,6 +1,6 @@
 # AduinAja!! — Sistem Pengaduan Sarana Sekolah
 
-Project Kelulusan RPL — SMK Negeri 5 Surakarta
+Project — SMK Negeri 5 Surakarta
 Rafka Nezar Azriel Ghibran — XII RPL A / No. 27
 
 Aplikasi web Laravel + MySQL untuk pengaduan kerusakan sarana & prasarana sekolah,
@@ -8,44 +8,10 @@ dengan 2 role: **Siswa/Warga Sekolah** dan **Admin/Petugas Sarpras**.
 
 ---
 
-## 1. Yang perlu sudah terpasang
-
-- **PHP 8.2 atau lebih baru** (`php -v`)
-- **Composer** (hanya jika folder `vendor/` tidak ikut / ada error package)
-- **MySQL** lewat **XAMPP** atau **Laragon** (nyalakan service MySQL)
-- **VS Code**
-- Koneksi internet saat membuka aplikasi (Tailwind CSS, Chart.js, dan font dimuat lewat CDN)
 
 ---
 
-## 2. Cara menjalankan (urut)
-
-### a. Buat database kosong
-1. Nyalakan MySQL di XAMPP/Laragon.
-2. Buka `http://localhost/phpmyadmin`.
-3. Buat database baru bernama persis **`aduinaja_db`**. Biarkan kosong, tabel dibuat otomatis oleh migration.
-
-### b. Cek `.env`
-Sudah diarahkan ke `aduinaja_db`, user `root`, tanpa password (default XAMPP/Laragon). Ubah bila MySQL kamu berbeda.
-
-### c. Di terminal VS Code (folder project)
-```bash
-php artisan migrate --seed
-```
-Membuat semua tabel + mengisi akun demo, kategori, lokasi, dan 24 contoh pengaduan (sebagian sudah ada foto dan satu ada video contoh).
-
-> Kalau sebelumnya sudah pernah `migrate` dengan project versi lama dan mau data bersih:
-> `php artisan migrate:fresh --seed` (⚠️ menghapus semua data).
-
-### d. Jalankan
-```bash
-php artisan serve
-```
-Buka **http://127.0.0.1:8000**
-
----
-
-## 3. Akun demo
+## Akun demo
 
 | Role  | Email                  | Password |
 |-------|------------------------|----------|
